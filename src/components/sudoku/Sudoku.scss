@@ -1,0 +1,60 @@
+.sudokuBackground {
+  width: 100%;
+  display: flex;
+  background-color: #fcffd6;
+  padding: 2rem 0;
+}
+
+.sudokuFrame {
+  width: 450px;
+  height: 360px;
+  margin: 0 auto;
+  background: linear-gradient(145deg, #ffffe5, #e3e6c1);
+  box-shadow: 5px 5px 10px #656656;
+  border: 2px solid black;
+  overflow: hidden;
+
+  h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin: 0;
+  }
+  .sudokuNumberRow {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    height: 40px;
+  }
+
+  .sudokuNumber {
+    text-align: center;
+    width: 48px;
+    padding: 0;
+    background: linear-gradient(145deg, #ffffe5, #e3e6c1);
+    border: none;
+    font-size: 24px;
+    border-right: 2px solid #d9d9d9;
+    border-bottom: 2px solid #d9d9d9;
+  }
+
+  .c2,
+  .c5 {
+    border-right: 2px solid black;
+  }
+
+  .r2,
+  .r5 {
+    border-bottom: 2px solid black;
+  }
+}
+
+.buttonSet {
+  width: 30%;
+
+  div {
+    width: 60%;
+    &:hover {
+      cursor: pointer;
+      background-position: right center;
+    }
+  }
+}
