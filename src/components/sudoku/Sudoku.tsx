@@ -66,7 +66,7 @@ const Sudoku = () => {
                 className={`sudokuNumber r${i} c${j}`}
                 maxLength={1}
                 name={`${i} ${j}`}
-                value={sArr[i][j] > 0 ? sArr[i][j] : ""}
+                value={value > 0 ? value : ""}
                 onChange={onChange}
               />
             ))}

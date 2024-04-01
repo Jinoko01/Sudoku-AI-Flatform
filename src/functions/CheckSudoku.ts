@@ -1,10 +1,12 @@
 function check(x: number, y: number, sudoku: number[][], k: number): boolean {
   // 가로 확인
   for (let i = 0; i < 9; i++) {
+    if (i === x) continue;
     if (sudoku[y][i] === k) return false;
   }
   // 세로 확인
   for (let i = 0; i < 9; i++) {
+    if (i === y) continue;
     if (sudoku[i][x] === k) return false;
   }
   // 사각형 확인
@@ -12,6 +14,7 @@ function check(x: number, y: number, sudoku: number[][], k: number): boolean {
   const squareY = Math.floor(y / 3) * 3;
   for (let i = squareY; i < squareY + 3; i++) {
     for (let j = sqaureX; j < sqaureX + 3; j++) {
+      if (i === y && j === x) continue;
       if (sudoku[i][j] === k) return false;
     }
   }
@@ -65,15 +68,14 @@ export function CheckSudoku(arr: number[][]) {
 }
 
 // 스도쿠 유효성 체크 함수
-export function startCheck(arr: number[][]) {
+export function startCheck(arr: number[][]): boolean {
   const sudoku = JSON.parse(JSON.stringify(arr));
   for (let i = 0; i < 9; i++) {
     for (let j = 0; j < 9; j++) {
-      for (let k = 1; k <= 9; k++) {
-        if (!check(i, j, sudoku, k)) {
-          alert("스도쿠가 유효하지 않습니다!");
-          return false;
-        }
+      if (sudoku[i][j] < 1 || sudoku[i][j] > 9) continue;
+      if (!check(j, i, sudoku, sudoku[i][j])) {
+        alert("스도쿠가 유효하지 않습니다!");
+        return false;
       }
     }
   }
