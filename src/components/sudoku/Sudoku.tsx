@@ -1,7 +1,7 @@
 import "./Sudoku.scss";
 import { useEffect, useState } from "react";
 import Button from "../common/Button";
-import CheckSudoku from "../../hooks/CheckSudoku";
+import { CheckSudoku, startCheck } from "../../functions/CheckSudoku";
 
 /*
 testArr
@@ -33,6 +33,7 @@ const Sudoku = () => {
 
   const onCheckSudoku = () => {
     let checkArr = JSON.parse(JSON.stringify(sArr));
+    if (!startCheck(checkArr)) return;
     checkArr = CheckSudoku(checkArr);
     setSArr(checkArr);
   };

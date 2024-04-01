@@ -51,7 +51,8 @@ function solution(sudoku: number[][], blank: number) {
   }
 }
 
-function CheckSudoku(arr: number[][]) {
+// 스도쿠 풀이 함수
+export function CheckSudoku(arr: number[][]) {
   let blank = 0;
   const sudoku = JSON.parse(JSON.stringify(arr));
   for (let i = 0; i < 9; i++) {
@@ -63,4 +64,18 @@ function CheckSudoku(arr: number[][]) {
   return result;
 }
 
-export default CheckSudoku;
+// 스도쿠 유효성 체크 함수
+export function startCheck(arr: number[][]) {
+  const sudoku = JSON.parse(JSON.stringify(arr));
+  for (let i = 0; i < 9; i++) {
+    for (let j = 0; j < 9; j++) {
+      for (let k = 1; k <= 9; k++) {
+        if (!check(i, j, sudoku, k)) {
+          alert("스도쿠가 유효하지 않습니다!");
+          return false;
+        }
+      }
+    }
+  }
+  return true;
+}
