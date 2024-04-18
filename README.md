@@ -1,5 +1,8 @@
 ## 스도쿠 자동풀이 사이트  
 
+### 링크
+[스도쿠 자동풀이](https://sudoku-ai-flatform.vercel.app/)
+
 ### 프로젝트 설명
 백트래킹 공부하다 삘받아서 만든 스도쿠 자동풀이 사이트
 작업 기간: 2시간
@@ -15,8 +18,3 @@
 ![image](https://github.com/Hwangyongjin/Sudoku-AI-Flatform/assets/126740959/8a71b634-d431-44c8-8ae8-b08a89467006)
 
 ![image](https://github.com/Hwangyongjin/Sudoku-AI-Flatform/assets/126740959/47fedb21-a0bd-4f4b-808e-629d2389958d)
-
-
-
-### 링크
-[스도쿠 자동풀이](https://sudoku-ai-flatform.vercel.app/)
