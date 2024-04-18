@@ -9,4 +9,5 @@
 ![image](https://github.com/Hwangyongjin/Sudoku-AI-Flatform/assets/126740959/8a71b634-d431-44c8-8ae8-b08a89467006)
 
 
-[링크](https://sudoku-ai-flatform.vercel.app/)
+### 링크
+[스도쿠 자동풀이](https://sudoku-ai-flatform.vercel.app/)
