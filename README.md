@@ -2,6 +2,7 @@
 
 ### 프로젝트 설명
 백트래킹 공부하다 삘받아서 만든 스도쿠 자동풀이 사이트
+작업 기간: 2시간
 
 ### 실행 화면
 ![image](https://github.com/Hwangyongjin/Sudoku-AI-Flatform/assets/126740959/25263546-3e1e-4557-a377-2a868f447a08)
